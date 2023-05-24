@@ -5,14 +5,17 @@
     margin: auto;
     width: 100%;
     font-family: 'Roboto Mono', monospace;
+    background-color: #222;
+    color: #fff;
 }
+
 .form-row {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
     margin: 10px 0;
-    
 }
+
 .form-row > label {
     font-size: 30px;
     margin: 5px;
@@ -23,8 +26,9 @@
     border: 0;
     background-color: rgba(0, 0, 0, 0);
     outline: none;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #fff;
     font-size: 30px;
+    color: #fff;
 }
 
 #loading {
@@ -33,6 +37,7 @@
     height: 20px;
     background-color: red; 
 }
+
 #loading-inside {
     height: 100%;
     width: 0%;
@@ -43,33 +48,41 @@
     display: flex;
     justify-content: center;
 }
-.buttons button{
+
+.buttons button {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
-    border: solid 2px black;
+    border: solid 2px #fff;
     font-size: 24px;
     font-family: 'Roboto Mono', monospace;
     width: 150px;
     margin: 5px;
+    color: #fff;
 }
 
 #answer {
     display: none;
+    font-size: 24px;
+    margin-top: 20px;
 }
-
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    body {background-color: lightblue; }
+    body {
+        background-color: #333;
+    }
+
     .app {
         width: 100%;
     }
-
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    body{background-color: salmon;}
+    body {
+        background-color: #444;
+    }
+
     .app {
         width: 85%;
     }
@@ -77,7 +90,10 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    body {background-color: orange;}
+    body {
+        background-color: #555;
+    }
+
     .app {
         width: 768px;
     }
@@ -85,7 +101,10 @@
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    body {background-color: lightseagreen}
+    body {
+        background-color: #666;
+    }
+
     .app {
         width: 992px;
     }
