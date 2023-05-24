@@ -9,9 +9,13 @@ var controller = {
     init: () => {
         view.init();
     },
-    keyDown: (e) => {
-        let len = view.getPetitionLength();
 
+    keyDown: (e) => {
+    const len = view.getPetitionLength();
+
+    if (len >= model.petitionText.length) {
+        return false;
+    }        
         if (e.key === ".") {
             // Period is the secret key
             model.answerToggle = !model.answerToggle;
@@ -34,7 +38,10 @@ var controller = {
         return model.needsReset;
     },
     getPetitionChar: () => {
-        return model.petitionText[view.getPetitionLength() - 1];
+        const len = view.getPetitionLength();
+        return len <= model.petitionText.length ? model.petitionText[len - 1] : ' ';
+    },
+
     },
     getAnswer: () => {
         const invalidResponse = [
